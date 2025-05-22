@@ -7,19 +7,8 @@ public class Philosopher extends Thread {
         this.id = id;
         this.table = table;
 
-        //Варіант, якщо один з філософів "неправильний"
-        if(id<4) {
-            rightFork = id;
-            leftFork = (id + 1) % 5;
-        }
-        else {
-            leftFork = id;
-            rightFork = (id + 1) % 5;
-        }
-
-
-        //rightFork = id;
-        //leftFork = (id + 1) % 5;
+        rightFork = id;
+        leftFork = (id + 1) % 5;
 
         start();
     }
